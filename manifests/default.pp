@@ -19,3 +19,10 @@ file { 'bash_profile':
     export EDITOR=vim
     . ~/.bashrc'
 }
+
+file { '/Users/josh/Development':
+  ensure => 'link',
+  target => '/home/vagrant',
+  owner  => 'vagrant',
+  group  => 'vagrant',
+}
