@@ -1,6 +1,7 @@
-package { 'silversearcher-ag':
-  ensure => 'installed'
-}
+# base packages
+$base_pkgs = ['tree','silversearcher-ag','tmux']
+
+package { $base_pkgs: ensure => installed }
 
 file { 'db script':
   path    => '/usr/local/bin/d',
