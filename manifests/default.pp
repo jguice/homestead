@@ -21,9 +21,10 @@ file { 'bash_profile':
     . ~/.bashrc'
 }
 
-file { '/Users/josh/Development':
-  ensure => 'link',
-  target => '/home/vagrant',
-  owner  => 'vagrant',
-  group  => 'vagrant',
-}
+# TODO why was this here?  Need to ensure this first path exists
+#file { '/Users/josh/Development':
+#  ensure => 'link',
+#  target => '/home/vagrant',
+#  owner  => 'vagrant',
+#  group  => 'vagrant',
+#}
